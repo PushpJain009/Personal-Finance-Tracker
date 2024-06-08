@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTransaction } from "../redux/actions";
 import "./AddTransaction.css";

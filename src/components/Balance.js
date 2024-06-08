@@ -1,3 +1,4 @@
+import React from "react";
 import { useSelector } from "react-redux";
 import "./Balance.css";
 
@@ -9,7 +10,7 @@ const Balance = () => {
   return (
     <div className="balance">
       <h4>Your Balance</h4>
-      <h1>₹{total}</h1>
+      <h1>₹ {total}</h1>
     </div>
   );
 };

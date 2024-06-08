@@ -1,5 +1,6 @@
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteTransaction } from "../redux/actions";
+import { deleteTransaction, clearUnsettled } from "../redux/actions";
 import "./TransactionList.css";
 
 const TransactionList = () => {
@@ -8,7 +9,7 @@ const TransactionList = () => {
 
   return (
     <div className="transaction-list">
-      <h3>History</h3>
+      {/* <h3>History</h3> */}
       <ul>
         {transactions.map((transaction) => (
           <li
@@ -29,6 +30,9 @@ const TransactionList = () => {
           </li>
         ))}
       </ul>
+      <button className="clear-btn" onClick={() => dispatch(clearUnsettled())}>
+        Clear Unsettled
+      </button>
     </div>
   );
 };

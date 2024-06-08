@@ -1,12 +1,19 @@
 .balance {
     margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .balance h4 {
     margin: 0;
+    font-size: 1.4em;
+    color: #333;
 }
 
 .balance h1 {
     margin: 10px 0;
-    font-size: 2rem;
+    font-size: 2.5em;
+    color: #007bff;
 }
