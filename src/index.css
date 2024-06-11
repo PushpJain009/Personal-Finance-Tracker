@@ -5,9 +5,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  user-select: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.bank_img {
+  position: absolute;
+  left: 150px;
+  top: 100px;
+}
+
+.locker_img {
+  position: absolute;
+  left: 300px;
+  top: 370px;
+}
+
+.money_bag_img {
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+}
+
+.cash_img {
+  position: absolute;
+  right: 50px;
+  top: 190px;
+}
+
+.piggy_bank_img {
+  position: absolute;
+  right: 200px;
+  bottom: 100px;
+}
+
+.bank_img, .locker_img, .money_bag_img, .cash_img, .piggy_bank_img {
+  transition: transform 0.3s ease;
+}
+
+.bank_img:hover, .locker_img:hover, .money_bag_img:hover, .cash_img:hover, .piggy_bank_img:hover {
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

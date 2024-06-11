@@ -1,35 +1,38 @@
 .add-transaction {
     margin: 20px 0;
-    background: #f9f9f9;
+    background: var(--background-light-black); /* Darker background for the form */
     padding: 10px 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-control {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow for 3D effect */
+  }
+  
+  .form-control {
     margin-bottom: 10px;
-}
-
-.form-control label {
+  }
+  
+  .form-control label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 1.1em;
-}
-
-.form-control input {
+    color: var(--secondary-color-dark-purple); /* Dark purple color */
+  }
+  
+  .form-control input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid var(--grey-border); /* Darker border */
     border-radius: 5px;
     font-size: 1em;
-}
-
-.btn {
+    background-color: var(--background-color-main); /* Matching input background */
+    color: var(--secondary-color-dark-purple); /* Dark purple color */
+  }
+  
+  .btn {
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--darker-purple); /* Dark purple button */
+    color: var(--white);
     border: none;
     cursor: pointer;
     width: 100%;
@@ -37,8 +40,10 @@
     border-radius: 5px;
     font-size: 1.1em;
     transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
+  }
+  
+  .btn:hover {
+    background-color: var(--darker-purple-hover); /* Darker purple on hover */
+    cursor:pointer; 
+  }
+  

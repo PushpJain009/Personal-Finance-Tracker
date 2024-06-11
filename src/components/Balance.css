@@ -1,19 +1,19 @@
 .balance {
     margin-bottom: 20px;
-    background: #f9f9f9;
+    background: var(--background-light-black); /* Darker background */
     padding: 5px 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.balance h4 {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow for 3D effect */
+  }
+  
+  .balance h4 {
     margin: 0;
     font-size: 1.4em;
-    color: #333;
-}
-
-.balance h1 {
+    color: var(--secondary-color-dark-purple); /* Dark purple color */
+  }
+  
+  .balance h1 {
     margin: 10px 0;
     font-size: 2.5em;
-    color: #007bff;
-}
+    color: var(--secondary-color-dark-purple); /* Dark purple color */
+  }

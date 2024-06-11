@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteTransaction, clearUnsettled } from "../redux/actions";
+import {
+  deleteTransaction,
+  clearUnsettled,
+  loadTransactions,
+} from "../redux/actions";
 import "./TransactionList.css";
 
 const TransactionList = () => {
   const transactions = useSelector((state) => state.transactions);
   const dispatch = useDispatch();
 
+  // Load transactions from localStorage when component mounts
+  useEffect(() => {
+    const storedTransactions =
+      JSON.parse(localStorage.getItem("transactions")) || [];
+    dispatch(loadTransactions(storedTransactions));
+  }, [dispatch]);
+
   return (
     <div className="transaction-list">
-      {/* <h3>History</h3> */}
       <ul>
         {transactions.map((transaction) => (
           <li
@@ -18,7 +28,7 @@ const TransactionList = () => {
           >
             {transaction.text}{" "}
             <span>
-              {transaction.amount < 0 ? "-" : "+"}$
+              {transaction.amount < 0 ? "- " : "+ "}₹
               {Math.abs(transaction.amount)}
             </span>
             <button
